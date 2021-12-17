@@ -1,0 +1,466 @@
+/* GENRALE */
+body {
+    margin: 0;
+    font-family: "roboto",sans-serif;
+}
+div {
+    display: block;
+}
+.FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FlexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.FlexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ColorPrimaire {
+    color: #9356DC;
+}
+.ColorSecndaire {
+    color: #FF79DA;
+}
+.ColorTertiaire {
+    color: #99E2D0;
+}
+.ColorWhite {
+    color: #f6f6f6;
+}
+.TextGras {
+    font-weight: bold;
+}
+.LineNone {
+    text-decoration: none;
+}
+strong {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.4rem;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+li {
+    padding: 0 0 12px 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+    font-size: 2.3rem;
+    margin: 0;
+    font-family: "shrikhand" ,sans-serif;
+    font-weight: bolder;
+}
+h2 {
+    text-decoration: none;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "roboto" ,sans-serif;
+    padding: 1.3rem 0 0.5rem 0;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+h3 {
+   font-family: "roboto" ,sans-serif;
+   font-size: 1.5rem;
+}
+h4 {
+    color: #f6f6f6;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-family: "roboto" ,sans-serif;
+    font-size: 14px;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Header */
+.HeaderLogo { 
+    text-align: center;
+    padding: 1rem 0 0 0;
+}
+ 
+/* Réservation */
+.Réservation {
+    grid-column-start: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f6f6f6;
+    font-size: 24px;
+    border-bottom: 5px solid #9356DC;
+}
+.RéservationLocal {
+    width: 100%;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    background-color: #eaeaea;
+    box-shadow: 0px 3px 3px #73737338 inset;
+}
+.RéservationLocalIcon {
+    margin: 0 1.5rem 0 -2rem;
+}
+.RéservationSearch {
+    margin: 3rem 0 0 0;
+}
+.RéservationSearchDesktop {
+    font-size: 2rem;
+}
+.Button {
+    margin: 4rem 0 3.5rem 0;
+    border-radius: 2rem;
+    border: 0;
+    box-shadow: 3px 3px 3px #dedada;
+    font-size: 1.5rem;
+    color: #fff;    
+    padding: 1rem;
+    background-image: radial-gradient(ellipse farthest-corner at 20px 0,#FF79DA 0%, #9356dc 100%);
+    cursor: pointer;
+}
+
+/* Function */
+.Function {
+    display: grid;
+    grid-template-columns: 1fr 70% 1fr;
+    grid-column-start: 2;
+    padding: 0 0 65px 0;
+    font-size: 1rem;
+    background: #f6f6f6;
+    box-shadow: 3px 0 3px #73737338 inset;
+    border-bottom: 5px solid #9356DC;
+    cursor: pointer;
+}
+.FunctionTitle {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-family: "roboto" ,sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0 1rem 0;
+    background-color: #eaeaea;
+    box-shadow: 3px 3px 3px #73737338 inset;
+}
+.FunctionStep {
+    display: flex;
+    margin: 1.5rem 0 25px 0;
+    padding: 1.8rem 0 1.3rem 0;
+    background-color: #fff;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 3px 3px 10px #dedada;
+    grid-column-start: 2;
+}
+a:hover {
+    background-color: #d3b6cb;
+    border-radius: 1.5rem;
+}
+.FunctionStepNumber {
+    color: #fff;
+    background-color: #9356DC;
+    border: 1px solid #9356DC;
+    border-radius: 50%;
+    padding: 4px 8px 4px 8px;
+    margin: 0 1.5rem 0 -12px;
+}
+.FunctionStepIcon {
+    grid-column-start: 2;
+    font-size: 25px;
+    color: #FF79DA;
+}
+.FunctionStepTitle {
+    grid-column-start: 2;
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Restaurants */
+.Restaurants {
+    display: grid;
+    grid-template-columns: 1fr 40% 40% 1fr;
+    grid-template-rows: 4rem repeat(2, 1fr);
+    gap: 2rem 2rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: #fff;
+}
+.RestaurantsTitle {
+    font-family: "roboto" , sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #fff;
+    margin: 0;
+    padding: 1rem 0 2rem 1.2rem;
+    grid-column-start: 2;
+}
+.Card1 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+.Card2 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+.Card3 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+.Card4 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+.RestaurantsCardText {
+    position: relative;
+    background-color: #fff;
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding-left: 1rem;
+    height: 75px;
+}
+.RestaurantsCardImg {
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    grid-column-start: 2;
+}
+.RestaurantsCardTag {
+    border-radius: 3px;
+    background-color: #9356dc;
+    color: #f6f6f6;
+    padding: 5px;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+.RestaurantsCard {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 250px;
+    border-radius: 1.5rem;
+    box-shadow: 3px 8px 8px #dedada;
+    margin: 0 0 3rem 0;
+}
+.RestaurantsHeartAnimation :hover{
+    position: absolute;
+    opacity: 0;
+    transform-origin: bottom;
+    font-size: 25px;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    cursor: pointer;
+    background-color: #d3b6cb;
+    border-radius: 0.5rem;
+}
+.fa-gradient {
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#000000));
+    -webkit-text-fill-color: #f6f6f6;
+}
+
+/* Footer */
+Footer {
+    background-color: #353535;
+    font-family: "roboto" ,sans-serif;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 0 0 0 1.5rem;
+    font-size: 12px;
+}
+.FooterLogo {
+    filter: invert(100%);
+    width: 105px;
+    height: 15px;
+    padding: 2rem 0 1.5rem 0;
+    margin: 0 0 0 -10px;
+}
+.FooterLink {
+    margin: 0 0 10px 0;
+}
+.WhiteIcons {
+    color: #f6f6f6;
+}
+
+/* La palette du goût */
+.Return {
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+}
+.PageMenuPict {
+    grid-column-start: 2;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.PageMenuTitle {
+    position: relative;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 2.4rem 0 0 1.5rem;
+    margin-top: -2rem;
+    background-color: #f6f6f6;
+}
+.RestaurantsHeart {
+    position: absolute;
+    cursor: pointer;
+    transform-origin: bottom;
+    opacity: 1;
+    top: 2.5rem;
+    right: 8%;
+    font-size: 1.5rem;
+    color: #0000;
+}
+.RestaurantsHeartMenu {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    transform-origin: bottom;
+    top: 2.5rem;
+    right: 8%;
+    font-size: 1.5rem;
+}
+.PageMenu {
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    background-color: #f6f6f6;
+}
+.PageMenuTitle {
+    position: relative;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 2.4rem 0 0 1.5rem;
+    margin-top: -2rem;
+    background-color: #f6f6f6;
+}
+.Menu {
+    grid-column-start: 2;
+}
+.MenuTitle {
+    padding: 3rem 0 0.5rem;
+    font-size: 1.9rem;
+}
+.MenuTitleUnderline {
+    border-top: 5px solid #FF79DA;
+}
+.MenuDesk {
+    position: relative;
+    background-color: #f6f6f6;
+    height: 70px;
+    padding: 0 0 15px 0;
+    margin: 1rem 0 12px 0;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 3px 3px 10px #dedada;
+    grid-column-start: 2;
+    
+}
+.MenuDeskTitle {
+    width: 100%;
+    padding: 0 0 0 12px;
+}
+.MenuDeskSubTitle {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0 1.5rem 0 12px;
+}
+.Text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #000;
+    font-size: 1.2rem;
+}
+.Price {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding-right: 0.4rem;
+    color: #000;
+}
+.MenuDeskAnimation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99E2D0;
+    top: 0;
+    left: 100%;
+    width: 20%;
+    height: 100%;
+    border-radius: 0 1.5rem 1.5rem 0;
+    color: #000;
+    font-size: 20px;
+}
+.ButtonMenuBlock {
+    grid-column-start: 2;
+    text-align: center;
+    margin: 2.5rem 0 4.3rem 0;
+    cursor: pointer;
+}
+.ButtonMenu {
+    width: 190px;
+    grid-column-start: 2;
+    border-radius: 2rem;
+    border: 0;
+    box-shadow: 3px 3px 3px #dedada;
+    font-size: 1.5rem;
+    color: #f6f6f6;
+    padding: 1rem;
+    background-image: radial-gradient(ellipse farthest-corner at 20px 0, #ff79da 0%, #9356dc 100%);
+    cursor: pointer;
+    transition: transform 400ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+.Footer {
+    background-color: #000;
+    font-family: "roboto" ,sans-serif;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 0 0 0 1.5rem;
+    font-size: 12px;
+}
+.FooterLogo {
+    filter: invert(100%);
+    width: 105px;
+    height: 15px;
+    padding: 2rem 0 1.5 0;
+    margin: 0 0 0 -10px;
+}
+.FooterLink {
+    margin: 0 0 10px 0;
+}
