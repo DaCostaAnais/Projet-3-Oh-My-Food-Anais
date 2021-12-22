@@ -46,7 +46,7 @@ strong {
 }
 a {
     text-decoration: none;
-    color: #000;
+    color: inherit;
 }
 li {
     padding: 0 0 12px 0;
@@ -65,7 +65,7 @@ h1 {
 h2 {
     text-decoration: none;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     font-family: "roboto" ,sans-serif;
     padding: 1.3rem 0 0.5rem 0;
@@ -76,21 +76,67 @@ h2 {
 }
 h3 {
    font-family: "roboto" ,sans-serif;
-   font-size: 1.5rem;
+   font-size: 1.8rem;
 }
 h4 {
     color: #f6f6f6;
     display: inline-block;
     margin: 0;
     padding: 0;
+    font-size: 15px;
 }
 p{
     font-family: "roboto" ,sans-serif;
-    font-size: 14px;
+    font-size: 17px;
     margin: 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+/* Loading */
+.LoaderPage {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    visibility: hidden;
+    transition: visibility 3s;
+}
+.LoaderPageSpinner {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 5px outset #ff73da;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.Spin {
+    background-color: #ff73da;
+    width: 30vh;
+    height: 30vh;
+    animation: spin 3s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Header */
@@ -107,7 +153,7 @@ p{
     flex-direction: column;
     text-align: center;
     background-color: #f6f6f6;
-    font-size: 24px;
+    font-size: 26px;
     border-bottom: 5px solid #9356DC;
 }
 .RéservationLocal {
@@ -130,12 +176,13 @@ p{
 .RéservationSearchDesktop {
     font-size: 2rem;
 }
+
 .Button {
     margin: 4rem 0 3.5rem 0;
     border-radius: 2rem;
     border: 0;
     box-shadow: 3px 3px 3px #dedada;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #fff;    
     padding: 1rem;
     background-image: radial-gradient(ellipse farthest-corner at 20px 0,#FF79DA 0%, #9356dc 100%);
@@ -159,11 +206,10 @@ p{
     grid-column-start: 1;
     grid-column-end: 4;
     font-family: "roboto" ,sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     padding: 1rem 0 1rem 0;
-    background-color: #eaeaea;
-    box-shadow: 3px 3px 3px #73737338 inset;
+    box-shadow: 3px 3px 3px #ff73da inset;
 }
 .FunctionStep {
     display: flex;
@@ -176,10 +222,6 @@ p{
     border-radius: 1.5rem;
     box-shadow: 3px 3px 10px #dedada;
     grid-column-start: 2;
-}
-a:hover {
-    background-color: #d3b6cb;
-    border-radius: 1.5rem;
 }
 .FunctionStepNumber {
     color: #fff;
@@ -212,13 +254,14 @@ a:hover {
     background: #fff;
 }
 .RestaurantsTitle {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
     font-family: "roboto" , sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    background: #fff;
-    margin: 0;
-    padding: 1rem 0 2rem 1.2rem;
-    grid-column-start: 2;
+    padding: 1rem 0 1rem 0;
+    box-shadow: 3px 3px 3px #ff73da inset;
 }
 .Card1 {
     grid-column-start: 2;
@@ -241,7 +284,7 @@ a:hover {
     background-color: #fff;
     border-radius: 0 0 1.5rem 1.5rem;
     padding-left: 1rem;
-    height: 75px;
+    height: 78px;
 }
 .RestaurantsCardImg {
     border-radius: 1.5rem 1.5rem 0 0;
@@ -268,7 +311,16 @@ a:hover {
     box-shadow: 3px 8px 8px #dedada;
     margin: 0 0 3rem 0;
 }
-.RestaurantsHeartAnimation :hover{
+.RestaurantsCardHeart {
+    position: absolute;
+    transform-origin: bottom;
+    opacity: 1;
+    font-size: 26px;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    cursor: pointer;
+}
+.RestaurantsHeartAnimation{
     position: absolute;
     opacity: 0;
     transform-origin: bottom;
@@ -276,12 +328,25 @@ a:hover {
     right: 1.5rem;
     bottom: 1.5rem;
     cursor: pointer;
-    background-color: #d3b6cb;
-    border-radius: 0.5rem;
+    transition: all 0.3s linear 0s;
+    background-color: #ff73da;
 }
-.fa-gradient {
-    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#000000));
-    -webkit-text-fill-color: #f6f6f6;
+.fa-gradient :hover {
+    transition: all 0.3s liner 0s;
+    background-color: #9356dc;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.fas {
+    -webkit-font-smoothing: anatialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
 }
 
 /* Footer */
@@ -331,17 +396,19 @@ Footer {
 .RestaurantsHeart {
     position: absolute;
     cursor: pointer;
+    -webkit-transform-origin: bottom;
     transform-origin: bottom;
     opacity: 1;
     top: 2.5rem;
     right: 8%;
     font-size: 1.5rem;
-    color: #0000;
+    color: #000;
 }
 .RestaurantsHeartMenu {
     position: absolute;
     cursor: pointer;
     opacity: 0;
+    -webkit-transform-origin: bottom;
     transform-origin: bottom;
     top: 2.5rem;
     right: 8%;
@@ -364,14 +431,16 @@ Footer {
 }
 .MenuTitle {
     padding: 3rem 0 0.5rem;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
 }
 .MenuTitleUnderline {
+    width: 3rem;
     border-top: 5px solid #FF79DA;
+    margin: 0.5rem 0 0 0;
 }
 .MenuDesk {
     position: relative;
-    background-color: #f6f6f6;
+    background-color: #fff;
     height: 70px;
     padding: 0 0 15px 0;
     margin: 1rem 0 12px 0;
@@ -383,7 +452,7 @@ Footer {
     border-radius: 1.5rem;
     box-shadow: 3px 3px 10px #dedada;
     grid-column-start: 2;
-    
+    animation: fadein 1.2s .3s ease-out both,transform .3s;
 }
 .MenuDeskTitle {
     width: 100%;
@@ -394,6 +463,29 @@ Footer {
     -webkit-box-pack: justify;
     justify-content: space-between;
     padding: 0 1.5rem 0 12px;
+}
+.MenuDeskAnimation {
+    position: absolute;
+    display: flex;
+   -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: #99E2D0;
+    top: 0;
+    left: 100%;
+    width: 20%;
+    height: 100%;
+    border-radius: 0 1.5rem 1.5rem 0;
+    color: #fff;
+    font-size: 20px;
+    transform-origin: right;
+    visibility: hidden;
+}
+.MenuDesk :hover>.MenuDeskAnimation {
+    visibility: visible;
+    transition: all .5s ease-in;
+    transform: translateX(-1000);
 }
 .Text {
     overflow: hidden;
@@ -407,20 +499,6 @@ Footer {
     font-weight: bolder;
     padding-right: 0.4rem;
     color: #000;
-}
-.MenuDeskAnimation {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #99E2D0;
-    top: 0;
-    left: 100%;
-    width: 20%;
-    height: 100%;
-    border-radius: 0 1.5rem 1.5rem 0;
-    color: #000;
-    font-size: 20px;
 }
 .ButtonMenuBlock {
     grid-column-start: 2;
@@ -439,10 +517,7 @@ Footer {
     padding: 1rem;
     background-image: radial-gradient(ellipse farthest-corner at 20px 0, #ff79da 0%, #9356dc 100%);
     cursor: pointer;
-    transition: transform 400ms;
-    &:hover {
-        transform: scale(1.15);
-    }
+    color: #fff;
 }
 .Footer {
     background-color: #000;
@@ -463,4 +538,64 @@ Footer {
 }
 .FooterLink {
     margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 770px) {
+    .Réservation {
+        font-size: initial;
+        border-bottom: initial;
+    }
+    .RéservationSearch {
+        margin: 0;
+    } 
+    .Button {
+        margin: 2rem 0 3.5rem 0;
+        font-size: 1rem;
+    }
+    .Function {
+        background: #fff;
+        grid-template-columns: 1fr 90% 1fr;
+        padding: 0 0 40px 0;
+        border-bottom: initial;
+        box-shadow: none;
+    }
+    .FunctionTitle {
+        grid-column-start: 2;
+        background-color: #fff;
+        box-shadow: none;
+        padding: 3.5rem 0 2rem 0;
+        text-align: start;
+    }
+    .FunctionStep {
+        background-color: #fff;
+        margin: 0 0 25px 0;
+    }
+    .Restaurants {
+        grid-template-columns: 1fr 90% 1fr;
+        grid-template-rows: none;
+        gap: 0;
+        background: #f6f6f6;
+    }
+    .RestaurantsTitle {
+        background: #f6f6f6;
+        padding: 3.8rem 0 1.5rem 0;
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    .Card1 {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+    .Card2 {
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+    .Card3 {
+        grid-column-start: 2;
+        grid-row-start: 4;
+    }
+    .Card4 {
+        grid-column-start: 2;
+        grid-row-start: 5;
+    }
 }
