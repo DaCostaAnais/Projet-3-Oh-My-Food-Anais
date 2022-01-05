@@ -128,7 +128,7 @@ p{
     background-color: #ff73da;
     width: 30vh;
     height: 30vh;
-    animation: spin 3s linear infinite;
+    animation: spin 4s linear infinite;
 }
 @keyframes spin {
     from {
@@ -322,31 +322,11 @@ p{
 }
 .RestaurantsHeartAnimation{
     position: absolute;
-    opacity: 0;
+    opacity: 0.8;
     transform-origin: bottom;
     font-size: 25px;
     right: 1.5rem;
     bottom: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s linear 0s;
-    background-color: #ff73da;
-}
-.fa-gradient :hover {
-    transition: all 0.3s liner 0s;
-    background-color: #9356dc;
-    width: 100%;
-    height: 0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-.fas {
-    -webkit-font-smoothing: anatialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
 }
 
 /* Footer */
@@ -374,7 +354,7 @@ Footer {
     color: #f6f6f6;
 }
 
-/* La palette du goût */
+/* Plat */
 .Return {
     position: absolute;
     top: 1.5rem;
@@ -464,28 +444,22 @@ Footer {
     justify-content: space-between;
     padding: 0 1.5rem 0 12px;
 }
-.MenuDeskAnimation {
-    position: absolute;
-    display: flex;
-   -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    background-color: #99E2D0;
-    top: 0;
-    left: 100%;
-    width: 20%;
-    height: 100%;
-    border-radius: 0 1.5rem 1.5rem 0;
-    color: #fff;
+.CircleCheck {
+    background: #9ae3d1;
+    margin-right: -60px;
+    width: 59px;
+    border-radius: 0 20px 20px 0;
     font-size: 20px;
-    transform-origin: right;
-    visibility: hidden;
-}
-.MenuDesk :hover>.MenuDeskAnimation {
-    visibility: visible;
-    transition: all .5s ease-in;
-    transform: translateX(-1000);
+    color: white;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .Text {
     overflow: hidden;
