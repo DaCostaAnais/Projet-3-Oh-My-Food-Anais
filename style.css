@@ -1,151 +1,117 @@
-/* GENRALE */
+@charset "UTF-8";
 body {
     margin: 0;
-    font-family: "roboto",sans-serif;
-}
-div {
-    display: block;
-}
-.FlexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.FlexAround {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.FlexBetween {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.ColorPrimaire {
-    color: #9356DC;
-}
-.ColorSecndaire {
-    color: #FF79DA;
-}
-.ColorTertiaire {
-    color: #99E2D0;
-}
-.ColorWhite {
-    color: #f6f6f6;
-}
-.TextGras {
-    font-weight: bold;
-}
-.LineNone {
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
     text-decoration: none;
 }
+
 strong {
     font-weight: bold;
     color: #000;
     font-size: 1.4rem;
 }
-a {
-    text-decoration: none;
-    color: inherit;
+
+.PrimaryColor {
+    color: #9356DC;
 }
+
+.SecondaryColor {
+    color: #FF79DA;
+}
+
+.ThirdColor {
+    color: #99E2D0;
+}
+
+.LineNone {
+    text-decoration: none;
+}
+
 li {
     padding: 0 0 12px 0;
 }
+
 ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
 }
+
 h1 {
-    font-size: 2.3rem;
-    margin: 0;
-    font-family: "shrikhand" ,sans-serif;
-    font-weight: bolder;
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+    margin: 20px 0 auto;
 }
+
 h2 {
-    text-decoration: none;
-    width: 100%;
-    font-size: 1.3rem;
-    font-weight: bold;
-    font-family: "roboto" ,sans-serif;
-    padding: 1.3rem 0 0.5rem 0;
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    font-family: "Shrikhand", cursive;
+    text-align: center;
 }
+
 h3 {
-   font-family: "roboto" ,sans-serif;
-   font-size: 1.8rem;
-}
-h4 {
-    color: #f6f6f6;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-}
-p{
-    font-family: "roboto" ,sans-serif;
-    font-size: 17px;
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    font-size: 1.5em;
 }
 
-/* Loading */
-.LoaderPage {
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    visibility: hidden;
-    transition: visibility 3s;
-}
-.LoaderPageSpinner {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    border: 5px outset #ff73da;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-}
-.Spin {
-    background-color: #ff73da;
-    width: 30vh;
-    height: 30vh;
-    animation: spin 4s linear infinite;
-}
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+h4, p {
+    margin: 0;
 }
 
-/* Header */
-.HeaderLogo { 
+main {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+}
+
+/*  HEADER  */
+.HeaderLogo {
     text-align: center;
     padding: 1rem 0 0 0;
 }
- 
-/* Réservation */
+
+/*  BUTTON RETURN  */
+.Return {
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    color: #000;
+}
+
+/*  FOOTER  */
+footer {
+    background-color: #353535;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 0 0 0 1.5rem;
+    font-size: 12px;
+}
+
+.FooterLink {
+    padding-left: 0;
+    list-style-type: none;
+    line-height: 25px;
+    cursor: default;
+    margin: 0 0 10px 0;
+}
+
+.FooterLogo {
+    filter: invert(100%);
+    width: 105px;
+    height: 15px;
+   padding: 2rem 0 1.5rem 0;
+   margin: 0 0 0 -10px;
+}
+
+.WhiteIcons {
+    color: #f6f6f6;
+}
+
+/*  PARTIE RESERVATION  */
 .Réservation {
     grid-column-start: 1;
     -webkit-box-orient: vertical;
@@ -153,11 +119,12 @@ p{
     flex-direction: column;
     text-align: center;
     background-color: #f6f6f6;
-    font-size: 26px;
+    font-size: 24px;
     border-bottom: 5px solid #9356DC;
 }
+
 .RéservationLocal {
-    width: 100%;
+    width: 100%0;
     display: inline-flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -167,29 +134,24 @@ p{
     background-color: #eaeaea;
     box-shadow: 0px 3px 3px #73737338 inset;
 }
+
 .RéservationLocalIcon {
     margin: 0 1.5rem 0 -2rem;
 }
+
+.RéservationSearchTitle {
+    padding: 0 40px;
+}
+
 .RéservationSearch {
     margin: 3rem 0 0 0;
 }
-.RéservationSearchDesktop {
+
+.RéservationSearchDesk {
     font-size: 2rem;
 }
 
-.Button {
-    margin: 4rem 0 3.5rem 0;
-    border-radius: 2rem;
-    border: 0;
-    box-shadow: 3px 3px 3px #dedada;
-    font-size: 2rem;
-    color: #fff;    
-    padding: 1rem;
-    background-image: radial-gradient(ellipse farthest-corner at 20px 0,#FF79DA 0%, #9356dc 100%);
-    cursor: pointer;
-}
-
-/* Function */
+/*  PARTIE FONCTIONNEMENT  */
 .Function {
     display: grid;
     grid-template-columns: 1fr 70% 1fr;
@@ -201,16 +163,7 @@ p{
     border-bottom: 5px solid #9356DC;
     cursor: pointer;
 }
-.FunctionTitle {
-    text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    font-family: "roboto" ,sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 1rem 0 1rem 0;
-    box-shadow: 3px 3px 3px #ff73da inset;
-}
+
 .FunctionStep {
     display: flex;
     margin: 1.5rem 0 25px 0;
@@ -223,27 +176,39 @@ p{
     box-shadow: 3px 3px 10px #dedada;
     grid-column-start: 2;
 }
-.FunctionStepNumber {
-    color: #fff;
-    background-color: #9356DC;
-    border: 1px solid #9356DC;
-    border-radius: 50%;
-    padding: 4px 8px 4px 8px;
-    margin: 0 1.5rem 0 -12px;
+
+.FunctionStep:hover {
+    background-color: rgba(147, 86, 220, 0.1);
+    cursor: default;
 }
+  
+.FunctionStep:hover .FunctionStepIcon {
+    color: #9356DC;
+}
+  
 .FunctionStepIcon {
     grid-column-start: 2;
     font-size: 25px;
     color: #FF79DA;
 }
+
 .FunctionStepTitle {
     grid-column-start: 2;
     margin-left: 2rem;
     font-size: 1rem;
     font-weight: bold;
 }
-
-/* Restaurants */
+  
+.FunctionStepNum {
+    color: #fff;
+    background-color: #9356DC;
+    border: 1px solid #9356DC;
+    border-radius: 50%;
+    padding: 4px 8px 4px 8px;
+    margin: 0 1.5rem  -12px;    
+}
+  
+/*  MAIN ACCUEIL - section restaurants  */
 .Restaurants {
     display: grid;
     grid-template-columns: 1fr 40% 40% 1fr;
@@ -251,41 +216,9 @@ p{
     gap: 2rem 2rem;
     -webkit-box-pack: center;
     justify-content: center;
-    background: #fff;
+    background: #f6f6f6;
 }
-.RestaurantsTitle {
-    text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    font-family: "roboto" , sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 1rem 0 1rem 0;
-    box-shadow: 3px 3px 3px #ff73da inset;
-}
-.Card1 {
-    grid-column-start: 2;
-    grid-row-start: 2;
-}
-.Card2 {
-    grid-column-start: 3;
-    grid-row-start: 2;
-}
-.Card3 {
-    grid-column-start: 2;
-    grid-row-start: 3;
-}
-.Card4 {
-    grid-column-start: 3;
-    grid-row-start: 3;
-}
-.RestaurantsCardText {
-    position: relative;
-    background-color: #fff;
-    border-radius: 0 0 1.5rem 1.5rem;
-    padding-left: 1rem;
-    height: 78px;
-}
+  
 .RestaurantsCardImg {
     border-radius: 1.5rem 1.5rem 0 0;
     width: 100%;
@@ -293,15 +226,7 @@ p{
     object-fit: cover;
     grid-column-start: 2;
 }
-.RestaurantsCardTag {
-    border-radius: 3px;
-    background-color: #9356dc;
-    color: #f6f6f6;
-    padding: 5px;
-    position: absolute;
-    top: 12px;
-    right: 10px;
-}
+  
 .RestaurantsCard {
     position: relative;
     background-color: #fff;
@@ -311,89 +236,56 @@ p{
     box-shadow: 3px 8px 8px #dedada;
     margin: 0 0 3rem 0;
 }
-.RestaurantsCardHeart {
-    position: absolute;
-    transform-origin: bottom;
-    opacity: 1;
-    font-size: 26px;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    cursor: pointer;
-}
-.RestaurantsHeartAnimation{
-    position: absolute;
-    opacity: 0.8;
-    transform-origin: bottom;
-    font-size: 25px;
-    right: 1.5rem;
-    bottom: 1.5rem;
-}
-
-/* Footer */
-Footer {
-    background-color: #353535;
-    font-family: "roboto" ,sans-serif;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    padding: 0 0 0 1.5rem;
-    font-size: 12px;
-}
-.FooterLogo {
-    filter: invert(100%);
-    width: 105px;
-    height: 15px;
-    padding: 2rem 0 1.5rem 0;
-    margin: 0 0 0 -10px;
-}
-.FooterLink {
-    margin: 0 0 10px 0;
-}
-.WhiteIcons {
-    color: #f6f6f6;
-}
-
-/* Plat */
-.Return {
-    position: absolute;
-    top: 1.5rem;
-    left: 1rem;
-}
-.PageMenuPict {
+  
+.Card1 {
     grid-column-start: 2;
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+    grid-row-start: 2;
 }
-.PageMenuTitle {
+
+.Card2 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.Card3 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.Card4 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.RestaurantsCardText {
     position: relative;
-    border-radius: 1.5rem 1.5rem 0 0;
-    padding: 2.4rem 0 0 1.5rem;
-    margin-top: -2rem;
     background-color: #f6f6f6;
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding-left: 1rem;
+    height: 75px;
 }
-.RestaurantsHeart {
-    position: absolute;
-    cursor: pointer;
-    -webkit-transform-origin: bottom;
-    transform-origin: bottom;
-    opacity: 1;
-    top: 2.5rem;
-    right: 8%;
+  
+.RestaurantsTitle {
+    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
-    color: #000;
+    font-weight: bold;
+    background: #f6f6f6;
+    margin: 0;
+    padding: 1rem 0 2rem 1.2rem;
+    grid-column-start: 2;
 }
-.RestaurantsHeartMenu {
+
+.RestaurantsCardTag {
+    border-radius: 3px;
+    background-color: #9356DC;
+    color: #f6f6f6;
+    padding: 5px;
     position: absolute;
-    cursor: pointer;
-    opacity: 0;
-    -webkit-transform-origin: bottom;
-    transform-origin: bottom;
-    top: 2.5rem;
-    right: 8%;
-    font-size: 1.5rem;
+    top: 12px;
+    right: 10px;
 }
+  
+/*  PageMenu  */
 .PageMenu {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
@@ -406,21 +298,32 @@ Footer {
     margin-top: -2rem;
     background-color: #f6f6f6;
 }
+
+.PageMenuPict{
+    grid-column-start: 2;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+   
 .Menu {
     grid-column-start: 2;
 }
 .MenuTitle {
     padding: 3rem 0 0.5rem;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
 }
+
+/*  MENUPAGE  */
 .MenuTitleUnderline {
     width: 3rem;
-    border-top: 5px solid #FF79DA;
+    border-top: 5px solid #ff79da;
     margin: 0.5rem 0 0 0;
 }
+  
 .MenuDesk {
     position: relative;
-    background-color: #fff;
+    background-color: #f6f6f6;
     height: 70px;
     padding: 0 0 15px 0;
     margin: 1rem 0 12px 0;
@@ -432,35 +335,141 @@ Footer {
     border-radius: 1.5rem;
     box-shadow: 3px 3px 10px #dedada;
     grid-column-start: 2;
-    animation: fadein 1.2s .3s ease-out both,transform .3s;
 }
+
 .MenuDeskTitle {
     width: 100%;
     padding: 0 0 0 12px;
 }
+
 .MenuDeskSubTitle {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     padding: 0 1.5rem 0 12px;
 }
-.CircleCheck {
-    background: #9ae3d1;
-    margin-right: -60px;
-    width: 59px;
-    border-radius: 0 20px 20px 0;
-    font-size: 20px;
-    color: white;
-    display: -webkit-box;
+  
+/*  LOADER  */
+.LoaderPage {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-box-align: center;
+    align-items: center;
+    visibility: hidden;
+    transition: visibility 2.6s;
 }
+  
+.LoaderPageSpinner {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 15px outset #000000;
+    display: flex;
+    animation-duration: 1220ms;
+    -webkit-animation-duration: 1220ms;
+}
+
+.Spin {
+    background-color: #ff73da;
+    width: 30vh;
+    height: 30vh;
+    animation: spin 3s linear infinite;
+}
+  
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/*  ANIMATION - Page blanche Loader */
+.LoaderStart {
+    animation: WhitePage 5s;
+}
+  
+@keyframes WhitePage {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+/*  Map et Commander  */
+.Button {
+    color: #ffffff;
+    background: linear-gradient(to top left, #9356DC, #FF79DA);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    transition: opacity 1s;
+}
+  
+.Button:hover {
+    opacity: 0.5;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+}
+  
+/*  Heart  */
+.Heart {
+    position: absolute;
+    cursor: pointer;
+    transform-origin: bottom;
+    opacity: 1%;
+    right: 8%;
+    top: 2.5rem;
+    font-size: 1.5rem;
+    color: #000;
+}
+  
+.HeartAnim {
+    position: initial;
+    margin-top: 20px;
+}
+  
+@keyframes Heart {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      background: linear-gradient(to bottom, #9356DC, #FF79DA);
+      -webkit-background-clip: text;
+    }
+    100% {
+      background: linear-gradient(to bottom, #9356DC, #FF79DA);
+      -webkit-background-clip: text;
+    }
+}
+/*  BOUTONS - sélection plats  */
+.Ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+    margin: 20px 0 0 10px;
+}
+  
 .Text {
     overflow: hidden;
     white-space: nowrap;
@@ -468,108 +477,89 @@ Footer {
     color: #000;
     font-size: 1.2rem;
 }
+  
 .Price {
     font-size: 1.2rem;
-    font-weight: bolder;
+    font-weight: bold;
     padding-right: 0.4rem;
     color: #000;
 }
-.ButtonMenuBlock {
-    grid-column-start: 2;
-    text-align: center;
-    margin: 2.5rem 0 4.3rem 0;
-    cursor: pointer;
-}
-.ButtonMenu {
-    width: 190px;
-    grid-column-start: 2;
-    border-radius: 2rem;
-    border: 0;
-    box-shadow: 3px 3px 3px #dedada;
-    font-size: 1.5rem;
-    color: #f6f6f6;
-    padding: 1rem;
-    background-image: radial-gradient(ellipse farthest-corner at 20px 0, #ff79da 0%, #9356dc 100%);
-    cursor: pointer;
-    color: #fff;
-}
-.Footer {
-    background-color: #000;
-    font-family: "roboto" ,sans-serif;
+  
+.ButtonDish {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    padding: 0 0 0 1.5rem;
-    font-size: 12px;
-}
-.FooterLogo {
-    filter: invert(100%);
-    width: 105px;
-    height: 15px;
-    padding: 2rem 0 1.5 0;
-    margin: 0 0 0 -10px;
-}
-.FooterLink {
-    margin: 0 0 10px 0;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 0px gainsboro;
+    margin-top: 20px;
+    height: 70px;
+} 
+ 
+.ButtonDish:hover .Box {
+    width: 70px;
 }
 
-@media screen and (max-width: 770px) {
-    .Réservation {
-        font-size: initial;
-        border-bottom: initial;
+.ButtonDish:hover .Box > .Check {
+    transform: rotate(0deg);
+}
+
+.Box {
+    overflow: hidden;
+    text-align: center;
+    background: #99E2D0;
+    width: 0;
+    align-items: center;
+    transition: width 1s;
+    padding-top: 25px;
+}
+  
+.Check {
+    display: inline-block;
+    margin: auto;
+    color: #fff;
+    font-size: 25px;
+    transform: rotate(360deg);
+    transition: transform 500ms;
+}
+
+/*  ANIMATION - Apparition boutons sélection  */
+.Up {
+    animation: fadein 1s;
+}
+  
+.Button1 {
+    animation-delay: 50ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+  
+.Button2 {
+    animation-delay: 150ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+  
+.Button3 {
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+  
+.Button4 {
+    animation-delay: 450ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+  
+@keyframes fadein {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
     }
-    .RéservationSearch {
-        margin: 0;
-    } 
-    .Button {
-        margin: 2rem 0 3.5rem 0;
-        font-size: 1rem;
-    }
-    .Function {
-        background: #fff;
-        grid-template-columns: 1fr 90% 1fr;
-        padding: 0 0 40px 0;
-        border-bottom: initial;
-        box-shadow: none;
-    }
-    .FunctionTitle {
-        grid-column-start: 2;
-        background-color: #fff;
-        box-shadow: none;
-        padding: 3.5rem 0 2rem 0;
-        text-align: start;
-    }
-    .FunctionStep {
-        background-color: #fff;
-        margin: 0 0 25px 0;
-    }
-    .Restaurants {
-        grid-template-columns: 1fr 90% 1fr;
-        grid-template-rows: none;
-        gap: 0;
-        background: #f6f6f6;
-    }
-    .RestaurantsTitle {
-        background: #f6f6f6;
-        padding: 3.8rem 0 1.5rem 0;
-        grid-column-start: 2;
-        grid-row-start: 1;
-    }
-    .Card1 {
-        grid-column-start: 2;
-        grid-row-start: 2;
-    }
-    .Card2 {
-        grid-column-start: 2;
-        grid-row-start: 3;
-    }
-    .Card3 {
-        grid-column-start: 2;
-        grid-row-start: 4;
-    }
-    .Card4 {
-        grid-column-start: 2;
-        grid-row-start: 5;
+    to {
+      transform: translateY(0);
+      opacity: 1;
     }
 }
