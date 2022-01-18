@@ -1,18 +1,121 @@
-@charset "UTF-8";
+
 body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: 1.2rem;
     text-decoration: none;
 }
-
-strong {
+header {
+    display: block;
+}
+section {
+    display: block;
+}
+div {
+    display: block;
+}
+main {
+    display: block;
+    flex-direction: column;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+}
+h1 {
+    font-family: "Shrikhand", sans-serif;
+    display: block;
+    font-size: 2.5rem;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0;
+    font-weight: bold;    
+}
+h2 {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+h3 {
+    display: block;
+    font-size: 1.4rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     font-weight: bold;
     color: #000;
-    font-size: 1.4rem;
+    text-decoration: none;
 }
-
+h4, p {
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+}
+.fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900px;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.far {
+    font-family: "Font awesome 5 Free";
+    font-weight: 400px;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.fa-2x {
+    font-size: 2em;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+ol {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+button {
+    appearance: auto;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-stretch: normal;
+    font-family: "Shrikhand", sans-serif;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0em;
+}
 .PrimaryColor {
     color: #9356DC;
 }
@@ -25,330 +128,6 @@ strong {
     color: #99E2D0;
 }
 
-.LineNone {
-    text-decoration: none;
-}
-
-li {
-    padding: 0 0 12px 0;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-h1 {
-    font-family: "Shrikhand", cursive;
-    text-align: center;
-    margin: 20px 0 auto;
-}
-
-h2 {
-    font-family: "Shrikhand", cursive;
-    text-align: center;
-}
-
-h3 {
-    font-size: 1.5em;
-}
-
-h4, p {
-    margin: 0;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 50px;
-    background-color: whitesmoke;
-}
-
-/*  HEADER  */
-.HeaderLogo {
-    text-align: center;
-    padding: 1rem 0 0 0;
-}
-
-/*  BUTTON RETURN  */
-.Return {
-    position: absolute;
-    top: 1.5rem;
-    left: 1rem;
-    color: #000;
-}
-
-/*  FOOTER  */
-footer {
-    background-color: #353535;
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    padding: 0 0 0 1.5rem;
-    font-size: 12px;
-}
-
-.FooterLink {
-    padding-left: 0;
-    list-style-type: none;
-    line-height: 25px;
-    cursor: default;
-    margin: 0 0 10px 0;
-}
-
-.FooterLogo {
-    filter: invert(100%);
-    width: 105px;
-    height: 15px;
-   padding: 2rem 0 1.5rem 0;
-   margin: 0 0 0 -10px;
-}
-
-.WhiteIcons {
-    color: #f6f6f6;
-}
-
-/*  PARTIE RESERVATION  */
-.Réservation {
-    grid-column-start: 1;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    text-align: center;
-    background-color: #f6f6f6;
-    font-size: 24px;
-    border-bottom: 5px solid #9356DC;
-}
-
-.RéservationLocal {
-    width: 100%0;
-    display: inline-flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 1rem 0 1rem 0;
-    background-color: #eaeaea;
-    box-shadow: 0px 3px 3px #73737338 inset;
-}
-
-.RéservationLocalIcon {
-    margin: 0 1.5rem 0 -2rem;
-}
-
-.RéservationSearchTitle {
-    padding: 0 40px;
-}
-
-.RéservationSearch {
-    margin: 3rem 0 0 0;
-}
-
-.RéservationSearchDesk {
-    font-size: 2rem;
-}
-
-/*  PARTIE FONCTIONNEMENT  */
-.Function {
-    display: grid;
-    grid-template-columns: 1fr 70% 1fr;
-    grid-column-start: 2;
-    padding: 0 0 65px 0;
-    font-size: 1rem;
-    background: #f6f6f6;
-    box-shadow: 3px 0 3px #73737338 inset;
-    border-bottom: 5px solid #9356DC;
-    cursor: pointer;
-}
-
-.FunctionStep {
-    display: flex;
-    margin: 1.5rem 0 25px 0;
-    padding: 1.8rem 0 1.3rem 0;
-    background-color: #fff;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 100%;
-    border-radius: 1.5rem;
-    box-shadow: 3px 3px 10px #dedada;
-    grid-column-start: 2;
-}
-
-.FunctionStep:hover {
-    background-color: rgba(147, 86, 220, 0.1);
-    cursor: default;
-}
-  
-.FunctionStep:hover .FunctionStepIcon {
-    color: #9356DC;
-}
-  
-.FunctionStepIcon {
-    grid-column-start: 2;
-    font-size: 25px;
-    color: #FF79DA;
-}
-
-.FunctionStepTitle {
-    grid-column-start: 2;
-    margin-left: 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-}
-  
-.FunctionStepNum {
-    color: #fff;
-    background-color: #9356DC;
-    border: 1px solid #9356DC;
-    border-radius: 50%;
-    padding: 4px 8px 4px 8px;
-    margin: 0 1.5rem  -12px;    
-}
-  
-/*  MAIN ACCUEIL - section restaurants  */
-.Restaurants {
-    display: grid;
-    grid-template-columns: 1fr 40% 40% 1fr;
-    grid-template-rows: 4rem repeat(2, 1fr);
-    gap: 2rem 2rem;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background: #f6f6f6;
-}
-  
-.RestaurantsCardImg {
-    border-radius: 1.5rem 1.5rem 0 0;
-    width: 100%;
-    height: 175px;
-    object-fit: cover;
-    grid-column-start: 2;
-}
-  
-.RestaurantsCard {
-    position: relative;
-    background-color: #fff;
-    width: 100%;
-    height: 250px;
-    border-radius: 1.5rem;
-    box-shadow: 3px 8px 8px #dedada;
-    margin: 0 0 3rem 0;
-}
-  
-.Card1 {
-    grid-column-start: 2;
-    grid-row-start: 2;
-}
-
-.Card2 {
-    grid-column-start: 3;
-    grid-row-start: 2;
-}
-
-.Card3 {
-    grid-column-start: 2;
-    grid-row-start: 3;
-}
-
-.Card4 {
-    grid-column-start: 3;
-    grid-row-start: 3;
-}
-
-.RestaurantsCardText {
-    position: relative;
-    background-color: #f6f6f6;
-    border-radius: 0 0 1.5rem 1.5rem;
-    padding-left: 1rem;
-    height: 75px;
-}
-  
-.RestaurantsTitle {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background: #f6f6f6;
-    margin: 0;
-    padding: 1rem 0 2rem 1.2rem;
-    grid-column-start: 2;
-}
-
-.RestaurantsCardTag {
-    border-radius: 3px;
-    background-color: #9356DC;
-    color: #f6f6f6;
-    padding: 5px;
-    position: absolute;
-    top: 12px;
-    right: 10px;
-}
-  
-/*  PageMenu  */
-.PageMenu {
-    display: grid;
-    grid-template-columns: 1fr 90% 1fr;
-    background-color: #f6f6f6;
-}
-.PageMenuTitle {
-    position: relative;
-    border-radius: 1.5rem 1.5rem 0 0;
-    padding: 2.4rem 0 0 1.5rem;
-    margin-top: -2rem;
-    background-color: #f6f6f6;
-}
-
-.PageMenuPict{
-    grid-column-start: 2;
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-   
-.Menu {
-    grid-column-start: 2;
-}
-.MenuTitle {
-    padding: 3rem 0 0.5rem;
-    font-size: 1.9rem;
-}
-
-/*  MENUPAGE  */
-.MenuTitleUnderline {
-    width: 3rem;
-    border-top: 5px solid #ff79da;
-    margin: 0.5rem 0 0 0;
-}
-  
-.MenuDesk {
-    position: relative;
-    background-color: #f6f6f6;
-    height: 70px;
-    padding: 0 0 15px 0;
-    margin: 1rem 0 12px 0;
-    cursor: pointer;
-    overflow: hidden;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 100%;
-    border-radius: 1.5rem;
-    box-shadow: 3px 3px 10px #dedada;
-    grid-column-start: 2;
-}
-
-.MenuDeskTitle {
-    width: 100%;
-    padding: 0 0 0 12px;
-}
-
-.MenuDeskSubTitle {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    padding: 0 1.5rem 0 12px;
-}
-  
 /*  LOADER  */
 .LoaderPage {
     position: fixed;
@@ -367,7 +146,6 @@ footer {
     visibility: hidden;
     transition: visibility 2.6s;
 }
-  
 .LoaderPageSpinner {
     position: relative;
     width: 200px;
@@ -378,7 +156,6 @@ footer {
     animation-duration: 1220ms;
     -webkit-animation-duration: 1220ms;
 }
-
 .Spin {
     background-color: #ff73da;
     width: 30vh;
@@ -410,43 +187,20 @@ footer {
       opacity: 1;
     }
 }
+
+/*  ANIMATION - Apparition boutons sélection  */
+
+@keyframes fadein {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
 /*  Map et Commander  */
-.Button {
-    color: #ffffff;
-    background: linear-gradient(to top left, #9356DC, #FF79DA);
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-    text-align: center;
-    padding: 10px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    width: 200px;
-    height: 50px;
-    margin: 20px auto;
-    transition: opacity 1s;
-}
-  
-.Button:hover {
-    opacity: 0.5;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
-}
-  
-/*  Heart  */
-.Heart {
-    position: absolute;
-    cursor: pointer;
-    transform-origin: bottom;
-    opacity: 1%;
-    right: 8%;
-    top: 2.5rem;
-    font-size: 1.5rem;
-    color: #000;
-}
-  
-.HeartAnim {
-    position: initial;
-    margin-top: 20px;
-}
   
 @keyframes Heart {
     0% {
@@ -461,105 +215,461 @@ footer {
       -webkit-background-clip: text;
     }
 }
-/*  BOUTONS - sélection plats  */
-.Ellipse {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    flex-grow: 1;
-    margin: 20px 0 0 10px;
+
+/*  HEADER  */
+.Header {
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    position: relative;
+    z-index: 1000;
+    text-align: center;
 }
-  
-.Text {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #000;
-    font-size: 1.2rem;
+
+.HeaderLogo {
+    font-family: "Shrikhand", cursive;
+    margin: 0;
+    text-align: center; 
 }
-  
-.Price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding-right: 0.4rem;
-    color: #000;
+.HeaderWithBackArrow {
+    position: relative;
 }
-  
-.ButtonDish {
+
+.HeaderArrow {
+    position: absolute;
+    left: 2rem;
+    height: 2rem;
+    width: 2rem;
+    top: 50%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #000;
+}
+
+
+
+/*  PARTIE RESERVATION  */
+.Local {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    background-color: #f3f3f3;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.LocalIcon {
+    margin-right: 1rem;
+}
+
+.LocalText {
+    font-weight: 700;
+}
+
+.Hero {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.HeroTitle {
+    margin: 0;
+}
+
+.HeroSubTitle {
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.HeroButton {
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    transition-duration: .25s;
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+}
+
+/* Tuto */
+.Tuto {
+    padding: 2rem 1rem;
+}
+
+.Container {
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+}
+
+.TutoTitle {
+    margin-top: 0;
+}
+
+.TutoSteps {
+    margin: 0;
+    list-style: none;
+    counter-reset: compteListe;
+}
+
+.TutoStep {
+    padding: 1.5rem;
+    margin: 1rem 0 1rem 0.75rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0, 0, 0 / 13%);
+    border-radius: 1.30rem;
+    background-color: #fff;
+    position: relative;
+}
+.TutoStep:before {
+    counter-increment: compteListe 1;
+    content: counter(compteListe) "";
+    background: #9356dc;
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    left: -0.75rem;
+}
+.TutoStep:last-child {
+    margin-bottom: 0;
+}
+
+.TutoIcon {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #ff73da;
+}
+  
+/*  MAIN ACCUEIL - section restaurants  */
+.Restaurants {
+    background-color: #f6f6f6;
+    padding: 2rem 1rem;
+}
+
+.RestaurantsTitle {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.Cards {
+    display: grid;
+    grid-template-columns: repeat(1.1fr);
+    columns: 2rem;
+    row-gap: 2rem;
+}
+
+.Card {
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.CardImg {
+    height: 12rem;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
+}
+.CardBadge {
+    background-color:  #000;
+    color: #ff73da;
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+}
+  
+.CardFooter {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.CardContent {
+    flex: 1;
+}
+
+.CardTitle {
+    margin: 0 0 0.25rem;
+}
+
+.CardSubTitle {
+    margin: 0;
+}
+
+/*  PageMenu  */
+.HeroImg {
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Menu {
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+}
+
+.MenuHeader {
+    padding: 1rem 2rem 0 1rem;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+.MenuTitle {
+    font-family: "Shrikhand", sans-serif;
+}
+
+.MenuButton {
+    height: 2rem;
+    width: 2rem;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #000;
+}
+.MenuButton:before {
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    background: linear-gradient(3deg,#9356dc,#ff79da);
+}
+
+.MenuLike {
+    transition-duration: .25s;
+    background: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+}
+.MenuButton:hover:before {
+    opacity: 1;
+}
+.MenuButton:hover .MenuLikeNoBg {
+    opacity: 1;
+}
+.MenuButton::before, .MenuLike {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+  
+.SubMenus {
+    display: grid;
+}
+
+.SubMenu {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.SubMenuTitle {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.SubMenuTitle:after {
+    content: "";
+    width: 3rem;
+    height: 0.25rem;
+    background-color: #99E2D0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.Delay0 {
+    animation-delay: 0s;
+}
+
+.Delay1 {
+    animation-delay: .1s;
+}
+
+.Delay2 {
+    animation-delay: .2s;
+}
+
+.Delay3 {
+    animation-delay: .3s;
+}
+
+.Delay4 {
+    animation-delay: .4s;
+}
+
+.Delay5 {
+    animation-delay: .5s;
+}
+
+.Delay6 {
+    animation-delay: .6s;
+}
+
+.Delay7 {
+    animation-delay: .7s;
+}
+
+.Delay8 {
+    animation-delay: .8s;
+}
+
+.MenuItem {
+    background-color: #f6f6f6;
+    padding: 1rem;
+    display: flex;
+    border-radius: 0.75rem;
+    margin: 1rem 0;
+    box-shadow: 0.25rem 1rem rgb(0, 0, 0 /10%);
     overflow: hidden;
     cursor: pointer;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0px 5px 10px 0px gainsboro;
-    margin-top: 20px;
-    height: 70px;
-} 
- 
-.ButtonDish:hover .Box {
-    width: 70px;
+    animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    max-width: 100%;
 }
 
-.ButtonDish:hover .Box > .Check {
-    transform: rotate(0deg);
+.MenuItemHeader {
+    flex: 1;
 }
 
-.Box {
+.MenuItemTitle {
+    margin: 0;
+}
+.MenuItemHeader, .MenuItemTitle {
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
-    text-align: center;
-    background: #99E2D0;
-    width: 0;
-    align-items: center;
-    transition: width 1s;
-    padding-top: 25px;
-}
-  
-.Check {
-    display: inline-block;
-    margin: auto;
-    color: #fff;
-    font-size: 25px;
-    transform: rotate(360deg);
-    transition: transform 500ms;
 }
 
-/*  ANIMATION - Apparition boutons sélection  */
-.Up {
-    animation: fadein 1s;
+.MenuItemDescription {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-  
-.Button1 {
-    animation-delay: 50ms;
-    animation-fill-mode: forwards;
-    opacity: 0;
+
+.MenuItemPrice {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 0.5rem;
 }
-  
-.Button2 {
-    animation-delay: 150ms;
-    animation-fill-mode: forwards;
-    opacity: 0;
+
+.MenuItemConfirmation {
+    background-color: #99E2D0;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
 }
-  
-.Button3 {
-    animation-delay: 300ms;
-    animation-fill-mode: forwards;
-    opacity: 0;
+
+.MenuItem:hover .MenuItemConfirmation {
+    margin-right: -1rem;
 }
-  
-.Button4 {
-    animation-delay: 450ms;
-    animation-fill-mode: forwards;
-    opacity: 0;
+
+.MenuItemWrapIcon {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition-duration: .5s;
 }
-  
-@keyframes fadein {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+
+/* Boutton Commander*/
+.WrapButton {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.CommandButton {
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    transition-duration: .25s;
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    display: block;
+}
+
+.Footer {
+    background-color: #353535;
+}
+
+.Footer .Container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+
+.FooterList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.FooterListElt {
+    margin: 0.5rem 0;
+}
+
+.FooterListElt:first-child {
+    margin-top: 1.5rem;
+}
+
+.FooterLink {
+    text-decoration: none;
+    color: #fff;
 }
