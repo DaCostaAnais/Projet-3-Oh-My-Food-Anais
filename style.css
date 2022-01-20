@@ -39,7 +39,7 @@ h2 {
 }
 h3 {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -48,10 +48,17 @@ h3 {
     color: #000;
     text-decoration: none;
 }
-h4, p {
+h4 {
     margin: 0;
     color: #000;
     text-decoration: none;
+    font-size: 1.5rem;
+}
+p {
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.3rem;
 }
 .fas {
     font-family: "Font Awesome 5 Free";
@@ -119,11 +126,9 @@ button {
 .PrimaryColor {
     color: #9356DC;
 }
-
 .SecondaryColor {
     color: #FF79DA;
 }
-
 .ThirdColor {
     color: #99E2D0;
 }
@@ -131,100 +136,117 @@ button {
 /*  LOADER  */
 .LoaderPage {
     position: fixed;
-    z-index: 99999;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    border-radius: 30px;
+}
+.Sortie {
+    animation: sortie 20s ease-in both;
+}
+.Spin0 {
+    border-left: 5px solid #000;
+    border-right: 5px solid #000;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    animation: spinner linear 2s infinite;
+    margin: auto;
+    position: absolute;
+    padding: 20px;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #fff;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    visibility: hidden;
-    transition: visibility 2.6s;
 }
-.LoaderPageSpinner {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    border: 15px outset #000000;
-    display: flex;
-    animation-duration: 1220ms;
-    -webkit-animation-duration: 1220ms;
+.Spin1 {
+    border-left: 5px solid #9356dc;
+    border-right: 5px solid #9356dc;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    animation: spinner linear 2s infinite;
+    margin: auto;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
-.Spin {
-    background-color: #ff73da;
-    width: 30vh;
-    height: 30vh;
-    animation: spin 3s linear infinite;
+.Spin2 {
+    border-left: 5px solid #99E2D0;
+    border-right: 5px solid #99E2D0;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    animation: spinner linear 2s infinite;
+    margin: auto;
+    position: absolute;
+    padding: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
-  
-@keyframes spin {
-    from {
+.Spin3 {
+    border-left: 5px solid #000;
+    border-right: 5px solid #000;
+    border-top: 5px solid #ff79da;
+    border-bottom: 5px solid #FF79DA;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: spinner linear 2s infinite;
+    margin: auto;
+    position: absolute;
+    padding: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@keyframes sortie {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        background: transparent;
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+        background: transparent;
+    }
+}
+
+@keyframes spinner {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(360deg);
-    }
-}
-/*  ANIMATION - Page blanche Loader */
-.LoaderStart {
-    animation: WhitePage 5s;
-}
-  
-@keyframes WhitePage {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-
-/*  ANIMATION - Apparition boutons sélection  */
-
-@keyframes fadein {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-}
-/*  Map et Commander  */
-  
-@keyframes Heart {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      background: linear-gradient(to bottom, #9356DC, #FF79DA);
-      -webkit-background-clip: text;
-    }
-    100% {
-      background: linear-gradient(to bottom, #9356DC, #FF79DA);
-      -webkit-background-clip: text;
     }
 }
 
 /*  HEADER  */
 .Header {
     padding: 1rem;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    box-shadow: 0 0 0.5rem rgba(3, 3, 3, 0.25);
     position: relative;
     z-index: 1000;
     text-align: center;
 }
-
 .HeaderLogo {
     font-family: "Shrikhand", cursive;
     margin: 0;
@@ -233,7 +255,6 @@ button {
 .HeaderWithBackArrow {
     position: relative;
 }
-
 .HeaderArrow {
     position: absolute;
     left: 2rem;
@@ -248,8 +269,6 @@ button {
     color: #000;
 }
 
-
-
 /*  PARTIE RESERVATION  */
 .Local {
     display: flex;
@@ -259,30 +278,24 @@ button {
     font-size: 1.4rem;
     position: relative;
 }
-
 .LocalIcon {
     margin-right: 1rem;
 }
-
 .LocalText {
     font-weight: 700;
 }
-
 .Hero {
     padding: 2rem;
     text-align: center;
     background-color: #fafafa;
 }
-
 .HeroTitle {
     margin: 0;
 }
-
 .HeroSubTitle {
     font-weight: 300;
     margin: 1.5rem 0;
 }
-
 .HeroButton {
     border: 0;
     padding: 0.75rem 1.5rem;
@@ -301,23 +314,18 @@ button {
 .Tuto {
     padding: 2rem 1rem;
 }
-
 .Container {
-    max-width: 1280px;
     margin: auto;
     position: relative;
 }
-
 .TutoTitle {
     margin-top: 0;
 }
-
 .TutoSteps {
     margin: 0;
     list-style: none;
     counter-reset: compteListe;
 }
-
 .TutoStep {
     padding: 1.5rem;
     margin: 1rem 0 1rem 0.75rem;
@@ -343,7 +351,6 @@ button {
 .TutoStep:last-child {
     margin-bottom: 0;
 }
-
 .TutoIcon {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -355,7 +362,6 @@ button {
     background-color: #f6f6f6;
     padding: 2rem 1rem;
 }
-
 .RestaurantsTitle {
     display: block;
     font-size: 1.5em;
@@ -365,23 +371,20 @@ button {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-
 .Cards {
     display: grid;
-    grid-template-columns: repeat(1.1fr);
+    grid-template-columns: repeat(1. 1fr);
     columns: 2rem;
     row-gap: 2rem;
 }
-
 .Card {
     background-color: #fff;
     border-radius: 1rem;
     position: relative;
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: grid;
 }
-
 .CardImg {
     height: 12rem;
     width: 100%;
@@ -399,24 +402,30 @@ button {
     top: 1rem;
     right: 0.75rem;
 }
-  
 .CardFooter {
     padding: 1rem;
     position: relative;
     display: flex;
     align-items: center;
 }
-
 .CardContent {
     flex: 1;
 }
-
 .CardTitle {
     margin: 0 0 0.25rem;
 }
-
 .CardSubTitle {
     margin: 0;
+}
+.CardButton {
+    height: 2rem;
+    width: 2rem;
+    background-color: initial;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*  PageMenu  */
@@ -426,7 +435,6 @@ button {
     width: 100%;
     object-fit: cover;
 }
-
 .Menu {
     margin-top: -4rem;
     border-radius: 2rem 2rem 0 0;
@@ -434,7 +442,6 @@ button {
     z-index: 1;
     position: relative;
 }
-
 .MenuHeader {
     padding: 1rem 2rem 0 1rem;
     display: flex;
@@ -444,7 +451,6 @@ button {
 .MenuTitle {
     font-family: "Shrikhand", sans-serif;
 }
-
 .MenuButton {
     height: 2rem;
     width: 2rem;
@@ -463,7 +469,6 @@ button {
     content: "";
     background: linear-gradient(3deg,#9356dc,#ff79da);
 }
-
 .MenuLike {
     transition-duration: .25s;
     background: #f6f6f6;
@@ -484,73 +489,60 @@ button {
     left: 0;
     height: 100%;
     width: 100%;
+    font-size: 1.9rem;
 }
-  
 .SubMenus {
     display: grid;
 }
-
 .SubMenu {
     max-width: 100%;
     overflow: hidden;
     padding: 0 1rem;
 }
-
 .SubMenuTitle {
     text-transform: uppercase;
     position: relative;
     padding-bottom: 0.5rem;
     font-weight: 400;
 }
-
 .SubMenuTitle:after {
     content: "";
-    width: 3rem;
+    width: 78rem;
     height: 0.25rem;
     background-color: #99E2D0;
     position: absolute;
     left: 0;
     bottom: 0;
 }
-
 .Delay0 {
     animation-delay: 0s;
 }
-
 .Delay1 {
     animation-delay: .1s;
 }
-
 .Delay2 {
     animation-delay: .2s;
 }
-
 .Delay3 {
     animation-delay: .3s;
 }
-
 .Delay4 {
     animation-delay: .4s;
 }
-
 .Delay5 {
     animation-delay: .5s;
 }
-
 .Delay6 {
     animation-delay: .6s;
 }
-
 .Delay7 {
     animation-delay: .7s;
 }
-
 .Delay8 {
     animation-delay: .8s;
 }
-
 .MenuItem {
-    background-color: #f6f6f6;
+    background-color: #fff;
     padding: 1rem;
     display: flex;
     border-radius: 0.75rem;
@@ -563,11 +555,12 @@ button {
     animation-fill-mode: both;
     max-width: 100%;
 }
-
+.MenuItemIcon {
+    color: #99E2D0;
+}
 .MenuItemHeader {
     flex: 1;
 }
-
 .MenuItemTitle {
     margin: 0;
 }
@@ -576,14 +569,12 @@ button {
     text-overflow: ellipsis;
     overflow: hidden;
 }
-
 .MenuItemDescription {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-
 .MenuItemPrice {
     font-weight: 700;
     display: flex;
@@ -591,20 +582,18 @@ button {
     align-items: flex-end;
     padding-left: 0.5rem;
 }
-
 .MenuItemConfirmation {
     background-color: #99E2D0;
+    margin: -1rem -5rem -1rem 1rem;
     width: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transition-duration: .5s;
 }
-
 .MenuItem:hover .MenuItemConfirmation {
     margin-right: -1rem;
 }
-
 .MenuItemWrapIcon {
     height: 1.6rem;
     width: 1.6rem;
@@ -623,7 +612,6 @@ button {
     justify-content: center;
     padding: 3rem 0;
 }
-
 .CommandButton {
     border: 0;
     padding: 0.75rem 1.5rem;
@@ -642,33 +630,25 @@ button {
 footer {
     display: block;
 }
-
 .Footer {
     background-color: #353535;
 }
-
 .Footer .Container {
     display: flex;
     flex-direction: column;
     padding: 1rem;
 }
-
-
-
 .FooterList {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .FooterListElt {
     margin: 0.5rem 0;
 }
-
 .FooterListElt:first-child {
     margin-top: 1.5rem;
 }
-
 .FooterLink {
     text-decoration: none;
     color: #fff;
